@@ -13,12 +13,12 @@ body > header {
 	.searchform { text-align:right; }
 }
 #logo { 
-	@include column(5);
+	@include column(8);
 }
 #logo h2 { margin:0; }
-#logo a { background:url('../images/mentor-makerspace.png') 0 0 no-repeat; width:321px; height:88px; display:block; }
+#logo a { background:url('../images/logo.gif') 0 0 no-repeat; width:513px; height:74px; display:block; }
 #search {
-	@include column(7);
+	@include column(4);
 }
 nav {
 	margin-top:-47px; 
@@ -59,10 +59,10 @@ nav {
 /*** [ Main Content ] ***/
 #content-header { 
 	background:#005b91;
-	border-top:2px solid #f7941d;
-	border-bottom:2px solid #f7941d;
+	border-top:2px solid #0097F3;
+	border-bottom:2px solid #0097F3;
 
-	.wrapper { background:transparent url(../images/blog-gfx.png) left bottom no-repeat; }
+	/* .wrapper { background:transparent url(../images/blog-gfx.png) left bottom no-repeat; } */
 
 	h1 { 
 		color:#fff; 
@@ -216,7 +216,7 @@ article.post { margin:30px 0 50px; }
 #sidebar {
 	background:#049af3;
 	padding:15px;
-	margin-top:-152px;
+	/* margin-top:-152px; */
 	color:#fff;
 	font-size:.8em;
 	@include column(3);

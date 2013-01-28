@@ -61,14 +61,7 @@
 		<![endif]-->
 		<header class="wrapper group">
 			<div id="logo" class="image-logo ir">
-				<?php
-
-					if (get_current_blog_id() == 7 ) {
-						echo '<img src="' . get_stylesheet_directory_uri() . '/images/logo.gif" alt="The Maker Education Initiative">';
-					} else {
-						echo '<h2><a href="' . home_url() . '">' . bloginfo('name') . '</a></h2>';
-					}
-				?>
+				<?php echo '<h2><a href="' . home_url() . '">' . bloginfo('name') . '</a></h2>'; ?>
 			</div><!--[END #logo.image-logo]-->
 			<aside id="search">
 				<?php get_search_form(); ?>

@@ -1302,7 +1302,7 @@ body > header {
   float: left;
   margin-left: 10px;
   margin-right: 10px;
-  width: 375px; }
+  width: 612px; }
 
 /* line 18, ../sass/_structure.scss */
 #logo h2 {
@@ -1310,9 +1310,9 @@ body > header {
 
 /* line 19, ../sass/_structure.scss */
 #logo a {
-  background: url("../images/mentor-makerspace.png") 0 0 no-repeat;
-  width: 321px;
-  height: 88px;
+  background: url("../images/logo.gif") 0 0 no-repeat;
+  width: 513px;
+  height: 74px;
   display: block; }
 
 /* line 20, ../sass/_structure.scss */
@@ -1321,7 +1321,7 @@ body > header {
   float: left;
   margin-left: 10px;
   margin-right: 10px;
-  width: 533px; }
+  width: 296px; }
 
 /* line 23, ../sass/_structure.scss */
 nav {
@@ -1369,11 +1369,9 @@ nav {
 /* line 60, ../sass/_structure.scss */
 #content-header {
   background: #005b91;
-  border-top: 2px solid #f7941d;
-  border-bottom: 2px solid #f7941d; }
-  /* line 65, ../sass/_structure.scss */
-  #content-header .wrapper {
-    background: transparent url(../images/blog-gfx.png) left bottom no-repeat; }
+  border-top: 2px solid #0097f3;
+  border-bottom: 2px solid #0097f3;
+  /* .wrapper { background:transparent url(../images/blog-gfx.png) left bottom no-repeat; } */ }
   /* line 67, ../sass/_structure.scss */
   #content-header h1 {
     color: #fff;
@@ -1633,7 +1631,7 @@ article.post {
 #sidebar {
   background: #049af3;
   padding: 15px;
-  margin-top: -152px;
+  /* margin-top:-152px; */
   color: #fff;
   font-size: .8em;
   display: inline;
