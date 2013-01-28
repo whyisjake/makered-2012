@@ -64,6 +64,15 @@
       "initialSize" : 7952,
       "fileType" : 8192
     },
+    "\/404.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/404.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
     "\/functions\/admin\/colorpicker\/rgb-g.jpg" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -75,14 +84,14 @@
       "initialSize" : 2807,
       "fileType" : 4096
     },
-    "\/404.php" : {
+    "\/style.css" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/404.php",
+      "inputAbbreviatedPath" : "\/style.css",
       "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
+      "fileType" : 16
     },
     "\/functions\/theme-header.php" : {
       "ignoreWasSetByUser" : 0,
@@ -92,15 +101,6 @@
       "inputAbbreviatedPath" : "\/functions\/theme-header.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
-    },
-    "\/style.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/style.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
     },
     "\/front-page.php" : {
       "ignoreWasSetByUser" : 0,
@@ -714,14 +714,14 @@
       "outputAbbreviatedPath" : "\/functions\/admin\/js\/colorpicker.min.js",
       "fileType" : 64
     },
-    "\/css\/application.css" : {
+    "\/config.rb" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
+      "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/css\/application.css",
+      "inputAbbreviatedPath" : "\/config.rb",
       "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
+      "fileType" : 32768
     },
     "\/sass\/_structure.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -735,14 +735,14 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/config.rb" : {
+    "\/css\/application.css" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/config.rb",
+      "inputAbbreviatedPath" : "\/css\/application.css",
       "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 32768
+      "fileType" : 16
     },
     "\/functions\/admin\/colorpicker\/hsb-s.jpg" : {
       "ignoreWasSetByUser" : 0,
