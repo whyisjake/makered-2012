@@ -61,7 +61,7 @@
 		<![endif]-->
 		<header class="wrapper group">
 			<div id="logo" class="image-logo ir">
-				<?php echo '<h2><a href="' . home_url() . '">' . bloginfo('name') . '</a></h2>'; ?>
+				<?php echo '<h2><a href="' . home_url() . '"><span style="display:none">' . get_bloginfo('name') . '</span></a></h2>'; ?>
 			</div><!--[END #logo.image-logo]-->
 			<aside id="search">
 				<?php get_search_form(); ?>

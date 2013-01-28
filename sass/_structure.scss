@@ -21,7 +21,8 @@ body > header {
 	@include column(4);
 }
 nav {
-	margin-top:-47px; 
+	margin-top:-47px;
+	margin-left:20px;
 	@include column(12);
 }
 
