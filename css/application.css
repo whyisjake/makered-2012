@@ -1116,7 +1116,7 @@ img.ui-datepicker-trigger {
 
 /* line 14, ../sass/_slider.scss */
 #slider-wrapper {
-  border-top: 2px solid #ed1c24;
+  border-top: 2px solid #8bd3fd;
   background: url("../images/homepage-image.jpg") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -1424,7 +1424,7 @@ nav {
 
 /* line 91, ../sass/_structure.scss */
 body#home #body-wrapper {
-  border-bottom: 2px solid #ed1c24;
+  border-bottom: 2px solid #8bd3fd;
   color: #fff;
   background: #005b91; }
   /* line 92, ../sass/_structure.scss */
