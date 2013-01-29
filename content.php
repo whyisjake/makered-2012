@@ -7,13 +7,11 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('group'); ?>>
 	<aside class="post-author">
-		<a href="<?php echo get_the_author_meta('user_url'); ?>">
-			<?php if('') : //currently no function exists for user photos. TO DO: BUILD ONE OR SOMETHING COOL LIKE THAT. ?>
-				<div class="author-photo">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/dale-dougherty.jpg" />
-				</div>
-			<?php endif; ?>
-			<?php printf(__('by %1$s', 'mentor_makerspace'), get_the_author_meta('display_name')); ?>
+		<a href="<?php echo get_author_posts_url(get_the_author_meta( 'ID' )); ?>">
+			<div class="author-photo">
+				<?php echo get_avatar( get_the_author_meta('user_email'), 70); ?>
+			</div>
+			<?php the_author_meta('display_name'); ?></a>
 		</a>
 	</aside>
 	<section class="post-body">
