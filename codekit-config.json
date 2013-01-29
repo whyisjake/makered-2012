@@ -84,15 +84,6 @@
       "initialSize" : 2807,
       "fileType" : 4096
     },
-    "\/style.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/style.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
-    },
     "\/functions\/theme-header.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -101,6 +92,15 @@
       "inputAbbreviatedPath" : "\/functions\/theme-header.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
+    },
+    "\/style.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/style.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
     },
     "\/front-page.php" : {
       "ignoreWasSetByUser" : 0,
@@ -714,14 +714,14 @@
       "outputAbbreviatedPath" : "\/functions\/admin\/js\/colorpicker.min.js",
       "fileType" : 64
     },
-    "\/config.rb" : {
+    "\/css\/application.css" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/config.rb",
+      "inputAbbreviatedPath" : "\/css\/application.css",
       "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 32768
+      "fileType" : 16
     },
     "\/sass\/_structure.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -735,14 +735,14 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/css\/application.css" : {
+    "\/config.rb" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
+      "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/css\/application.css",
+      "inputAbbreviatedPath" : "\/config.rb",
       "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
+      "fileType" : 32768
     },
     "\/functions\/admin\/colorpicker\/hsb-s.jpg" : {
       "ignoreWasSetByUser" : 0,
