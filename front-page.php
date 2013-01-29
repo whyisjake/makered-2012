@@ -26,11 +26,7 @@
 		</section><!--[END #boy-wrapper] -->
 		<section id="footer-wrapper" class="wrapper">
 			<section class="three-column">
-				<?php 
-					if(!dynamic_sidebar('home-footer-1')) : 
-						wp_list_pages();
-					endif;
-				?>
+				<?php if(!dynamic_sidebar('home-footer-1')) : endif; ?>
 			</section><!--[END .three-column]-->
 			<section class="three-column single-featured-block">
 				<?php if(!dynamic_sidebar('home-footer-2')) : ?>
@@ -49,25 +45,7 @@
 				<?php endif; ?>
 			</section><!--[END .three-column]-->
 			<section class="three-column">
-				<?php 
-					if(!dynamic_sidebar('home-footer-3')) : 
-						get_posts(  array(
-							'numberposts'		=>	5,
-							'offset'			=>	0,
-							'category'			=>	,
-							'orderby'			=>	'post_date',
-							'order'				=>	'DESC',
-							'include'			=>	,
-							'exclude'			=>	,
-							'meta_key'			=>	,
-							'meta_value'		=>	,
-							'post_type'			=>	'post',
-							'post_mime_type'	=>	,
-							'post_parent'		=>	,
-							'post_status'		=>	'publish' )
-						)
-					endif;
-				?>
+				<?php if(!dynamic_sidebar('home-footer-3')) : endif; ?>
 			</section><!--[END .three-column]-->
 		</section>
 	<?php get_footer(); ?>
