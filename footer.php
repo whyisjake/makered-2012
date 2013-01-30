@@ -21,7 +21,6 @@
 		<![endif]-->
 		
 		<?php mms_ga_code(); ?>
-		<script src="http://www.connectamillionminds.com/_js/widget.js" type="text/javascript"></script>
 		<?php wp_footer(); ?>
 	</body>
 </html>
