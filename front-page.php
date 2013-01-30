@@ -12,25 +12,6 @@
 	get_header(); ?>
 		<section id="slider-wrapper">
 			<section class="wrapper">
-				<aside id="login">
-					<?php if(!is_user_logged_in()) : //check if current user is logged in, if they are, hide the login form! :P ?>
-						<form name="loginform" id="loginform" action="<?php echo home_url(); ?>/wp-login.php" method="post">
-							<div class="alignleft">
-								<input type="text" name="log" id="user_login" class="input" value="<?php echo esc_attr($user_login); ?>" placeholder="<?php esc_attr_e('Username', 'mentor_makerspace'); ?>" size="20" tabindex="10" /></label>
-							</div>
-							<div class="alignleft">
-								<input type="password" name="pwd" id="user_pass" class="input " value="<?php echo esc_attr($user_login); ?>" placeholder="<?php esc_attr_e('Password', 'mentor_makerspace'); ?>" size="20" tabindex="20" /></label>
-							</div>
-							<div class="submit alignleft">
-								<input type="submit" name="wp-submit" id="wp-submit" class="button-primary" value="<?php esc_attr_e('Go', 'mentor_makerspace'); ?>" tabindex="100" />
-								<input type="hidden" name="redirect_to" value="<?php echo home_url(); ?>" />
-								<input type="hidden" name="testcookie" value="1" />
-							</div>
-						</form>
-					<?php else : ?>
-						<p>Welcome, <?php mms_get_get_user_info(); ?>! <a href="<?php echo wp_logout_url(get_permalink()); ?>" class="button">Logout</a></p>
-					<?php endif; ?>
-				</aside><!--[END #login]-->
 				<section id="slider" class="flexslider">
 					<?php mms_get_slides(); ?>
 				</section><!--[END #slider.flexslider]-->
