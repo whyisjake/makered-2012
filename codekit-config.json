@@ -33,6 +33,15 @@
       "initialSize" : 1948,
       "fileType" : 8192
     },
+    "\/sidebar.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/sidebar.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
     "\/functions\/admin\/colorpicker\/hsb-h.jpg" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -54,15 +63,6 @@
       "outputAbbreviatedPath" : "\/screenshot.png",
       "initialSize" : 7952,
       "fileType" : 8192
-    },
-    "\/sidebar.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/sidebar.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
     },
     "\/404.php" : {
       "ignoreWasSetByUser" : 0,
@@ -122,17 +122,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/images\/dale-dougherty.jpg" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/dale-dougherty.jpg",
-      "processed" : 1,
-      "outputAbbreviatedPath" : "\/images\/dale-dougherty.jpg",
-      "initialSize" : 2009,
-      "fileType" : 4096
-    },
     "\/images\/landing4_small.jpeg" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -154,6 +143,17 @@
       "outputAbbreviatedPath" : "\/images\/icons-s3be31e2866.png",
       "initialSize" : 2883,
       "fileType" : 8192
+    },
+    "\/images\/dale-dougherty.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/dale-dougherty.jpg",
+      "processed" : 1,
+      "outputAbbreviatedPath" : "\/images\/dale-dougherty.jpg",
+      "initialSize" : 2009,
+      "fileType" : 4096
     },
     "\/sass\/_blankwork.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -470,24 +470,6 @@
       "initialSize" : 2989,
       "fileType" : 8192
     },
-    "\/functions\/widgets\/fw-contact-form.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/functions\/widgets\/fw-contact-form.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
-    "\/template.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/template.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/sass\/_forms.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -499,6 +481,24 @@
       "outputAbbreviatedPath" : "\/css\/_forms.css",
       "fileType" : 4,
       "debugStyle" : 0
+    },
+    "\/template.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/template.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/functions\/widgets\/fw-contact-form.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/functions\/widgets\/fw-contact-form.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/content-page.php" : {
       "ignoreWasSetByUser" : 0,
@@ -581,15 +581,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/functions\/admin\/admin-metaboxes.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/functions\/admin\/admin-metaboxes.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/functions\/admin\/colorpicker\/rgb-b.jpg" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -600,6 +591,15 @@
       "outputAbbreviatedPath" : "\/functions\/admin\/colorpicker\/rgb-b.jpg",
       "initialSize" : 2794,
       "fileType" : 4096
+    },
+    "\/functions\/admin\/admin-metaboxes.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/functions\/admin\/admin-metaboxes.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/index.php" : {
       "ignoreWasSetByUser" : 0,
@@ -735,27 +735,6 @@
       "initialSize" : 10355,
       "fileType" : 8192
     },
-    "\/functions\/admin\/admin-header.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/functions\/admin\/admin-header.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
-    "\/sass\/_menu.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/sass\/_menu.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/css\/_menu.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
     "\/functions\/admin\/js\/colorpicker.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -767,15 +746,15 @@
       "outputAbbreviatedPath" : "\/functions\/admin\/js\/colorpicker.min.js",
       "fileType" : 64
     },
-    "\/sass\/application.scss" : {
+    "\/sass\/_menu.scss" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/sass\/application.scss",
+      "inputAbbreviatedPath" : "\/sass\/_menu.scss",
       "outputStyle" : 0,
       "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/css\/application.css",
+      "outputAbbreviatedPath" : "\/css\/_menu.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -791,6 +770,27 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
+    "\/sass\/application.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/sass\/application.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/css\/application.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/functions\/admin\/admin-header.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/functions\/admin\/admin-header.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
     "\/images\/im4.jpeg" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -802,14 +802,14 @@
       "initialSize" : 108660,
       "fileType" : 4096
     },
-    "\/css\/application.css" : {
+    "\/config.rb" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
+      "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/css\/application.css",
+      "inputAbbreviatedPath" : "\/config.rb",
       "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
+      "fileType" : 32768
     },
     "\/sass\/_structure.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -863,14 +863,14 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
-    "\/config.rb" : {
+    "\/css\/application.css" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/config.rb",
+      "inputAbbreviatedPath" : "\/css\/application.css",
       "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 32768
+      "fileType" : 16
     },
     "\/functions.php" : {
       "ignoreWasSetByUser" : 0,

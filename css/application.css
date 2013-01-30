@@ -1236,7 +1236,7 @@ html[xmlns] .slides {
 .flex-control-nav {
   width: 100%;
   position: absolute;
-  bottom: 87px;
+  bottom: -20px;
   text-align: center; }
 
 /* line 73, ../sass/_slider.scss */
