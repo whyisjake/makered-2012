@@ -13,7 +13,7 @@
 		<section id="slider-wrapper">
 			<section class="wrapper">
 				<section id="slider" class="flexslider">
-					<?php //mms_get_call_to_action_slider(); ?>
+					<?php mms_get_call_to_action_slider(); ?>
 				</section><!--[END #slider.flexslider]-->
 			</section><!--[END .wrapper]-->
 		</section><!--[END #slider]-->

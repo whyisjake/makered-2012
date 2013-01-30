@@ -84,15 +84,6 @@
       "initialSize" : 2807,
       "fileType" : 4096
     },
-    "\/functions\/theme-header.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/functions\/theme-header.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/style.css" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -101,6 +92,15 @@
       "inputAbbreviatedPath" : "\/style.css",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
+    },
+    "\/functions\/theme-header.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/functions\/theme-header.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/images\/im5.jpeg" : {
       "ignoreWasSetByUser" : 0,
@@ -133,17 +133,6 @@
       "initialSize" : 2009,
       "fileType" : 4096
     },
-    "\/images\/icons-s3be31e2866.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/icons-s3be31e2866.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/icons-s3be31e2866.png",
-      "initialSize" : 2883,
-      "fileType" : 8192
-    },
     "\/images\/landing4_small.jpeg" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -154,6 +143,17 @@
       "outputAbbreviatedPath" : "\/images\/landing4_small.jpeg",
       "initialSize" : 102717,
       "fileType" : 4096
+    },
+    "\/images\/icons-s3be31e2866.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/icons-s3be31e2866.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/icons-s3be31e2866.png",
+      "initialSize" : 2883,
+      "fileType" : 8192
     },
     "\/sass\/_blankwork.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -470,24 +470,6 @@
       "initialSize" : 2989,
       "fileType" : 8192
     },
-    "\/functions\/widgets\/fw-contact-form.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/functions\/widgets\/fw-contact-form.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
-    "\/template.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/template.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/sass\/_forms.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -499,6 +481,24 @@
       "outputAbbreviatedPath" : "\/css\/_forms.css",
       "fileType" : 4,
       "debugStyle" : 0
+    },
+    "\/template.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/template.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/functions\/widgets\/fw-contact-form.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/functions\/widgets\/fw-contact-form.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/content-page.php" : {
       "ignoreWasSetByUser" : 0,
@@ -542,15 +542,6 @@
       "outputAbbreviatedPath" : "\/functions\/admin\/js\/admin-functions.min.js",
       "fileType" : 64
     },
-    "\/comments.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/comments.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/sass\/_normalize.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -562,6 +553,15 @@
       "outputAbbreviatedPath" : "\/css\/_normalize.css",
       "fileType" : 4,
       "debugStyle" : 0
+    },
+    "\/comments.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/comments.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/content-single.php" : {
       "ignoreWasSetByUser" : 0,
@@ -756,18 +756,6 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/sass\/_slider.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/sass\/_slider.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/css\/_slider.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
     "\/functions\/admin\/js\/colorpicker.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -788,6 +776,18 @@
       "outputStyle" : 0,
       "shouldRunBless" : 0,
       "outputAbbreviatedPath" : "\/css\/application.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/sass\/_slider.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/sass\/_slider.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/css\/_slider.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -834,17 +834,6 @@
       "initialSize" : 14592,
       "fileType" : 8192
     },
-    "\/functions\/admin\/colorpicker\/hsb-s.jpg" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/functions\/admin\/colorpicker\/hsb-s.jpg",
-      "processed" : 1,
-      "outputAbbreviatedPath" : "\/functions\/admin\/colorpicker\/hsb-s.jpg",
-      "initialSize" : 2801,
-      "fileType" : 4096
-    },
     "\/config.rb" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -853,6 +842,15 @@
       "inputAbbreviatedPath" : "\/config.rb",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 32768
+    },
+    "\/css\/ie.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/css\/ie.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
     },
     "\/css\/slider.css" : {
       "ignoreWasSetByUser" : 0,
@@ -863,14 +861,16 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
-    "\/css\/ie.css" : {
+    "\/functions\/admin\/colorpicker\/hsb-s.jpg" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/css\/ie.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
+      "inputAbbreviatedPath" : "\/functions\/admin\/colorpicker\/hsb-s.jpg",
+      "processed" : 1,
+      "outputAbbreviatedPath" : "\/functions\/admin\/colorpicker\/hsb-s.jpg",
+      "initialSize" : 2801,
+      "fileType" : 4096
     },
     "\/functions.php" : {
       "ignoreWasSetByUser" : 0,
