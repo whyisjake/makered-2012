@@ -6,8 +6,8 @@
 	 * @package Mentor.Makerspace.com
 	 * @since Mentor.Makerspace.com 1.0
 	 */
-	
-	
+
+
 	/*****
 	 * Description: Add our dynamic color options to the head of our document
 	 * Since: 0.1
@@ -15,7 +15,7 @@
 	/*****/
 	function mms_custom_theme_options() {
 		global $shortname, $mms_content_options, $mms_slider_options;
-		
+
 		/*** [ Add Styles ] ***/
 		//theme options
 		$theme_header_height = $mms_content_options[$shortname . '-header'];
@@ -36,7 +36,7 @@
 			)
 		);
 		$theme_font_options = implode(', ', array_keys(array_filter($theme_font['font-options'])));
-		
+
 		if(!empty($mms_content_options)) {
 			echo '<style type="text/css">';
 
@@ -48,23 +48,23 @@
 				$header_height = $theme_header_height;
 			}
 			echo (!empty($header_height)) ? "header{height:{$header_height};}" : '';
-			
+
 			//header padding
 			echo (!empty($theme_header_padding)) ? "header{padding:{$theme_header_padding};}" : '';
-			
+
 			//custom font
 			if(!empty($theme_font['font']) && $theme_font['font'] != '-- Select A Font --') {
 				echo (!empty($theme_font) && !empty($theme_font['font-options'])) ? "{$theme_font_options}{font-family:'{$theme_font['font']}';}" : '';
 			}
-			
+
 			echo '</style>' . "\n";
 		}
-		
+
 		/*** [ Add Javascripts ] ***/
 		//$slider_function = $mms_slider_options[$shortname . '-slider'];
-		
+
 		//add slider functions
-		//mms_slider_source();
+		mms_slider_source();
 	}
 	add_action('wp_head', 'mms_custom_theme_options');
 
@@ -109,9 +109,9 @@
 			<aside class="post-meta group">
 				<section class="post-date alignleft">
 					<?php printf(__('%1$s in ', 'mentor_makerspace'), get_the_date()); the_category(','); ?>
-				</section> 
+				</section>
 				<section class="tags alignleft">
-					<?php 
+					<?php
 						$tags_list = get_the_tag_list('', __(', ', 'mentor_makerspace'));
 						if($tags_list) {
 							printf(__('Tags: %1$s', 'mentor_makerspace'), $tags_list);
@@ -119,15 +119,15 @@
 							_e('Tags: <span stlye="font-weight:normal;">none</span>');
 						}
 					?>
-				</section> 
+				</section>
 				<section class="comments alignleft">
 					<?php printf(__('%1$s <a href="%2$s#comments">Comments</a>', 'mentor_makerspace'), comments_number('<span>0</span>', '<span>1</span>', '<span>%</span>'), get_permalink());  ?>
 				</section>
 			</aside>
 		<?php }
 	endif;
-	
-	
+
+
 	/*****
 	* Description: Return the ID of home or interior
 	* Since: 0.1
@@ -139,11 +139,11 @@
 		} else {
 			$page_id = 'interior';
 		}
-		
+
 		echo $page_id;
 	}
-	
-	
+
+
 	/*****
 	 * Description: List out our slider images
 	 * Since: 0.1
@@ -151,14 +151,14 @@
 	/*****/
 	function mms_get_slides() {
 		global $shortname, $mms_slider_options;
-		
+
 		$slide1 = $mms_slider_options[$shortname . '-slider-image-1'];
 		$slide2 = $mms_slider_options[$shortname . '-slider-image-2'];
 		$slide3 = $mms_slider_options[$shortname . '-slider-image-3'];
 		$slide4 = $mms_slider_options[$shortname . '-slider-image-4'];
 		$slide5 = $mms_slider_options[$shortname . '-slider-image-5'];
 		$slide6 = $mms_slider_options[$shortname . '-slider-image-6'];
-		
+
 		if(!empty($slide1) || !empty($slide2) || !empty($slide3) || !empty($slide4) || !empty($slide5) || !empty($slide6)) {
 			$slides = array($slide1,$slide2,$slide3,$slide4,$slide5,$slide6);
 		}
@@ -176,11 +176,11 @@
 			echo '</ul>' . "\n";
 		} else {
 			echo '<img src="' . get_stylesheet_directory_uri() . '/images/slider-1.jpg" title="Please upload some slides! :)" />';
-		} 
+		}
 	}
 
-	
-	
+
+
 	/*****
 	 * Description: Output the code for our Flexslider Slider (AKA Full Width Slider)
 	 * Since: 0.1
@@ -189,7 +189,7 @@
 	function mms_slider_source() {
 		if(!is_admin() && is_front_page()) {
 			global $shortname, $mms_slider_options;
-			
+
 			$animation = $mms_slider_options[$shortname . '-full-slider-animation'];
 			$direction = $mms_slider_options[$shortname . '-full-slider-direction'];
 			$auto = $mms_slider_options[$shortname . '-full-slider-box-columns'];
@@ -201,10 +201,10 @@
 			$randomSlide = $mms_slider_options[$shortname . '-full-slider-random'];
 			$captionOpactiy = $mms_slider_options[$shortname . '-slider-caption-opacity'];
 			$pauseHover = $mms_slider_options[$shortname . '-full-slider-pause-hover'];
-			
-			
+
+
 			echo '<script type="text/javascript">jQuery(window).load(function(){jQuery(\'.flexslider\').flexslider({';
-			
+
 			//is an animation set, or else fall to default
 			echo (isset($animation) && !empty($animation)) ? "animation:'$animation'," : "animation:'fade', ";
 
@@ -213,32 +213,32 @@
 
 			//auto slide
 			echo (isset($auto) && !empty($auto)) ? "slideshow:$auto," : "slideshow:true, ";
-	
+
 			//pause time
 			echo (isset($pause) && !empty($pause)) ? "slideshowSpeed:$pause," : "slideshowSpeed:7000, ";
-			
+
 			//animation speed
 			echo (isset($animSpeed) && !empty($animSpeed)) ? "animationDuration:$animSpeed," : "animationDuration:500, ";
-			
+
 			//is navigation enabled
 			echo (isset($navEnabled) && !empty($navEnabled)) ? "directionNav:$navEnabled," : "directionNav:false, ";
-			
+
 			//use keyboard for navigation
 			echo (isset($keyboardNav) && !empty($keyboardNav)) ? "keyboardNav:$keyboardNav," : "keyboardNav:true, ";
-			
+
 			//pause on hover
 			echo (isset($mouseNav) && !empty($mouseNav)) ? "mousewheel:$mouseNav," : "mousewheel:true, ";
-			
+
 			//force manual transitions
 			echo (isset($randomSlide) && !empty($randomSlide)) ? "randomize:$randomSlide," : "randomize:false, ";
-			
+
 			//caption background opacity
-			echo (isset($pauseHover) && !empty($pauseHover)) ? "pauseOnHover:$pauseHover" : "pauseOnHover:false";					        
-			
+			echo (isset($pauseHover) && !empty($pauseHover)) ? "pauseOnHover:$pauseHover" : "pauseOnHover:false";
+
 			echo '});});</script>';
 		}
 	}
-	
+
 
 	/*****
 	 * Description: Prints HTML with meta information for the current post-date/time and author
@@ -252,17 +252,17 @@
 			<p><?php echo $mms_content_options[$shortname . '-header-cta-text']; ?> <a href="<?php echo $mms_content_options[$shortname . '-header-cta-btn-link']; ?>" class="button"><?php echo $mms_content_options[$shortname . '-header-cta-btn-text']; ?></a></p>
 		</aside><!--[END .button.featured-btn]-->
 	<?php }
-	
+
 	/*****
 	 * Description: Format the layout of our comments list
 	 * Since: 0.1
 	 * Author: Cole Geissinger
 	/*****/
 	function mms_list_comments($comment, $args, $depth) {
-		$GLOBALS['comment'] = $comment; 
-		
+		$GLOBALS['comment'] = $comment;
+
 		//echo '<pre>'; print_r($comment); echo '</pre>'; ?>
-		
+
 		<li id="li-comment-<?php comment_ID(); ?>" <?php comment_class('group'); ?>>
 			<div class="gravatar alignleft">
 				<?php echo get_avatar($comment->comment_author_email, '50'); ?>
@@ -271,13 +271,13 @@
 				<div class="comment-meta">
 					<strong><?php echo get_comment_author(); ?></strong> - <?php printf(__('%1$s', 'mentor_makerspace'), get_comment_date(), get_comment_time()); ?>
 				</div><!--[END .comment-meta]-->
-				
+
 				<?php if($comment->comment_approved == '0') : ?>
 					<em><?php _e('your comment is awaiting moderation.', 'mentor_makerspace'); ?></em><br />
 				<?php endif; ?>
-				
+
 				<?php comment_text(); ?>
-				
+
 				<div class="reply">
 					<?php comment_reply_link(array_merge($args, array('reply_text' => 'Reply', 'depth' => $depth, 'max_depth' => $args['max_depth']))); ?>
 				</div><!--[END .reply]-->
@@ -299,8 +299,8 @@
 		return $fields;
 	}
 	add_filter('comment_form_default_fields','my_fields');
-	
-	
+
+
 	/*****
 	 * Description: Filter the title to a set number of characters when using the previous and next_post_link function
 	 * Since: 0.1
@@ -308,15 +308,15 @@
 	/*****/
 	function mms_shorten_linktext($linkstring) {
 		$characters = 35;
-		
+
 		preg_match('/<a.*?>(.*?)<\/a>/is', $linkstring, $matches);
 		$display_title = $matches[1];
 		$new_title = shorten_with_ellipsis($display_title, $characters);
-		
+
 		return str_replace('>' . $display_title . '<', '>' . $new_title . '<', $linkstring);
 	}
 	function shorten_with_ellipsis($inputstring, $characters) {
-  		return (strlen($inputstring) >= $characters) ? substr($inputstring, 0, ($characters-3)) . '...' : $inputstring;
+		return (strlen($inputstring) >= $characters) ? substr($inputstring, 0, ($characters-3)) . '...' : $inputstring;
 	}
 	add_filter('previous_post_link', 'mms_shorten_linktext');
 	add_filter('next_post_link', 'mms_shorten_linktext');
@@ -330,160 +330,160 @@
 	* @Description: Numbered Page Navigation (Pagination) Code.
 	* @Tested: Up to WordPress version 3.1.2 (also works on WP 3.3.1)
 	********************************************************************/
-	 
+
 	/* Function that Rounds To The Nearest Value.
 	   Needed for the pagenavi() function */
 	function round_num($num, $to_nearest) {
 	   /*Round fractions down (http://php.net/manual/en/function.floor.php)*/
 	   return floor($num/$to_nearest)*$to_nearest;
 	}
-	 
+
 	/* Function that performs a Boxed Style Numbered Pagination (also called Page Navigation).
 	   Function is largely based on Version 2.4 of the WP-PageNavi plugin */
 	function pagenavi($before = '', $after = '') {
-	    global $wpdb, $wp_query;
-	    $pagenavi_options = array();
-	    $pagenavi_options['pages_text'] = ('Page %CURRENT_PAGE% of %TOTAL_PAGES%:');
-	    $pagenavi_options['current_text'] = '%PAGE_NUMBER%';
-	    $pagenavi_options['page_text'] = '%PAGE_NUMBER%';
-	    $pagenavi_options['first_text'] = ('First Page');
-	    $pagenavi_options['last_text'] = ('Last Page');
-	    $pagenavi_options['next_text'] = 'Next &raquo;';
-	    $pagenavi_options['prev_text'] = '&laquo; Previous';
-	    $pagenavi_options['dotright_text'] = '...';
-	    $pagenavi_options['dotleft_text'] = '...';
-	    $pagenavi_options['num_pages'] = 5; //continuous block of page numbers
-	    $pagenavi_options['always_show'] = 0;
-	    $pagenavi_options['num_larger_page_numbers'] = 0;
-	    $pagenavi_options['larger_page_numbers_multiple'] = 5;
-	 
-	    //If NOT a single Post is being displayed
-	    /*http://codex.wordpress.org/Function_Reference/is_single)*/
-	    if (!is_single()) {
-	        $request = $wp_query->request;
-	        //intval — Get the integer value of a variable
-	        /*http://php.net/manual/en/function.intval.php*/
-	        $posts_per_page = intval(get_query_var('posts_per_page'));
-	        //Retrieve variable in the WP_Query class.
-	        /*http://codex.wordpress.org/Function_Reference/get_query_var*/
-	        $paged = intval(get_query_var('paged'));
-	        $numposts = $wp_query->found_posts;
-	        $max_page = $wp_query->max_num_pages;
-	 
-	        //empty — Determine whether a variable is empty
-	        /*http://php.net/manual/en/function.empty.php*/
-	        if(empty($paged) || $paged == 0) {
-	            $paged = 1;
-	        }
-	 
-	        $pages_to_show = intval($pagenavi_options['num_pages']);
-	        $larger_page_to_show = intval($pagenavi_options['num_larger_page_numbers']);
-	        $larger_page_multiple = intval($pagenavi_options['larger_page_numbers_multiple']);
-	        $pages_to_show_minus_1 = $pages_to_show - 1;
-	        $half_page_start = floor($pages_to_show_minus_1/2);
-	        //ceil — Round fractions up (http://us2.php.net/manual/en/function.ceil.php)
-	        $half_page_end = ceil($pages_to_show_minus_1/2);
-	        $start_page = $paged - $half_page_start;
-	 
-	        if($start_page <= 0) {
-	            $start_page = 1;
-	        }
-	 
-	        $end_page = $paged + $half_page_end;
-	        if(($end_page - $start_page) != $pages_to_show_minus_1) {
-	            $end_page = $start_page + $pages_to_show_minus_1;
-	        }
-	        if($end_page > $max_page) {
-	            $start_page = $max_page - $pages_to_show_minus_1;
-	            $end_page = $max_page;
-	        }
-	        if($start_page <= 0) {
-	            $start_page = 1;
-	        }
-	 
-	        $larger_per_page = $larger_page_to_show*$larger_page_multiple;
-	        //round_num() custom function - Rounds To The Nearest Value.
-	        $larger_start_page_start = (round_num($start_page, 10) + $larger_page_multiple) - $larger_per_page;
-	        $larger_start_page_end = round_num($start_page, 10) + $larger_page_multiple;
-	        $larger_end_page_start = round_num($end_page, 10) + $larger_page_multiple;
-	        $larger_end_page_end = round_num($end_page, 10) + ($larger_per_page);
-	 
-	        if($larger_start_page_end - $larger_page_multiple == $start_page) {
-	            $larger_start_page_start = $larger_start_page_start - $larger_page_multiple;
-	            $larger_start_page_end = $larger_start_page_end - $larger_page_multiple;
-	        }
-	        if($larger_start_page_start <= 0) {
-	            $larger_start_page_start = $larger_page_multiple;
-	        }
-	        if($larger_start_page_end > $max_page) {
-	            $larger_start_page_end = $max_page;
-	        }
-	        if($larger_end_page_end > $max_page) {
-	            $larger_end_page_end = $max_page;
-	        }
-	        if($max_page > 1 || intval($pagenavi_options['always_show']) == 1) {
-	            /*http://php.net/manual/en/function.str-replace.php */
-	            /*number_format_i18n(): Converts integer number to format based on locale (wp-includes/functions.php*/
-	            $pages_text = str_replace("%CURRENT_PAGE%", number_format_i18n($paged), $pagenavi_options['pages_text']);
-	            $pages_text = str_replace("%TOTAL_PAGES%", number_format_i18n($max_page), $pages_text);
-	            echo $before.'<div class="pagenavi">'."\n";
-	 
-	            if(!empty($pages_text)) {
-	                echo '<span class="pages">'.$pages_text.'</span>';
-	            }
-	            //Displays a link to the previous post which exists in chronological order from the current post.
-	            /*http://codex.wordpress.org/Function_Reference/previous_post_link*/
-	            previous_posts_link($pagenavi_options['prev_text']);
-	 
-	            if ($start_page >= 2 && $pages_to_show < $max_page) {
-	                $first_page_text = str_replace("%TOTAL_PAGES%", number_format_i18n($max_page), $pagenavi_options['first_text']);
-	                //esc_url(): Encodes < > & " ' (less than, greater than, ampersand, double quote, single quote).
-	                /*http://codex.wordpress.org/Data_Validation*/
-	                //get_pagenum_link():(wp-includes/link-template.php)-Retrieve get links for page numbers.
-	                echo '<a href="'.esc_url(get_pagenum_link()).'" class="first" title="'.$first_page_text.'">1</a>';
-	                if(!empty($pagenavi_options['dotleft_text'])) {
-	                    echo '<span class="expand">'.$pagenavi_options['dotleft_text'].'</span>';
-	                }
-	            }
-	 
-	            if($larger_page_to_show > 0 && $larger_start_page_start > 0 && $larger_start_page_end <= $max_page) {
-	                for($i = $larger_start_page_start; $i < $larger_start_page_end; $i+=$larger_page_multiple) {
-	                    $page_text = str_replace("%PAGE_NUMBER%", number_format_i18n($i), $pagenavi_options['page_text']);
-	                    echo '<a href="'.esc_url(get_pagenum_link($i)).'" class="single_page" title="'.$page_text.'">'.$page_text.'</a>';
-	                }
-	            }
-	 
-	            for($i = $start_page; $i  <= $end_page; $i++) {
-	                if($i == $paged) {
-	                    $current_page_text = str_replace("%PAGE_NUMBER%", number_format_i18n($i), $pagenavi_options['current_text']);
-	                    echo '<span class="current">'.$current_page_text.'</span>';
-	                } else {
-	                    $page_text = str_replace("%PAGE_NUMBER%", number_format_i18n($i), $pagenavi_options['page_text']);
-	                    echo '<a href="'.esc_url(get_pagenum_link($i)).'" class="single_page" title="'.$page_text.'">'.$page_text.'</a>';
-	                }
-	            }
-	 
-	            if ($end_page < $max_page) {
-	                if(!empty($pagenavi_options['dotright_text'])) {
-	                    echo '<span class="expand">'.$pagenavi_options['dotright_text'].'</span>';
-	                }
-	                $last_page_text = str_replace("%TOTAL_PAGES%", number_format_i18n($max_page), $pagenavi_options['last_text']);
-	                echo '<a href="'.esc_url(get_pagenum_link($max_page)).'" class="last" title="'.$last_page_text.'">'.$max_page.'</a>';
-	            }
-	            next_posts_link($pagenavi_options['next_text'], $max_page);
-	 
-	            if($larger_page_to_show > 0 && $larger_end_page_start < $max_page) {
-	                for($i = $larger_end_page_start; $i <= $larger_end_page_end; $i+=$larger_page_multiple) {
-	                    $page_text = str_replace("%PAGE_NUMBER%", number_format_i18n($i), $pagenavi_options['page_text']);
-	                    echo '<a href="'.esc_url(get_pagenum_link($i)).'" class="single_page" title="'.$page_text.'">'.$page_text.'</a>';
-	                }
-	            }
-	            echo '</div>'.$after."\n";
-	        }
-	    }
+		global $wpdb, $wp_query;
+		$pagenavi_options = array();
+		$pagenavi_options['pages_text'] = ('Page %CURRENT_PAGE% of %TOTAL_PAGES%:');
+		$pagenavi_options['current_text'] = '%PAGE_NUMBER%';
+		$pagenavi_options['page_text'] = '%PAGE_NUMBER%';
+		$pagenavi_options['first_text'] = ('First Page');
+		$pagenavi_options['last_text'] = ('Last Page');
+		$pagenavi_options['next_text'] = 'Next &raquo;';
+		$pagenavi_options['prev_text'] = '&laquo; Previous';
+		$pagenavi_options['dotright_text'] = '...';
+		$pagenavi_options['dotleft_text'] = '...';
+		$pagenavi_options['num_pages'] = 5; //continuous block of page numbers
+		$pagenavi_options['always_show'] = 0;
+		$pagenavi_options['num_larger_page_numbers'] = 0;
+		$pagenavi_options['larger_page_numbers_multiple'] = 5;
+
+		//If NOT a single Post is being displayed
+		/*http://codex.wordpress.org/Function_Reference/is_single)*/
+		if (!is_single()) {
+			$request = $wp_query->request;
+			//intval — Get the integer value of a variable
+			/*http://php.net/manual/en/function.intval.php*/
+			$posts_per_page = intval(get_query_var('posts_per_page'));
+			//Retrieve variable in the WP_Query class.
+			/*http://codex.wordpress.org/Function_Reference/get_query_var*/
+			$paged = intval(get_query_var('paged'));
+			$numposts = $wp_query->found_posts;
+			$max_page = $wp_query->max_num_pages;
+
+			//empty — Determine whether a variable is empty
+			/*http://php.net/manual/en/function.empty.php*/
+			if(empty($paged) || $paged == 0) {
+				$paged = 1;
+			}
+
+			$pages_to_show = intval($pagenavi_options['num_pages']);
+			$larger_page_to_show = intval($pagenavi_options['num_larger_page_numbers']);
+			$larger_page_multiple = intval($pagenavi_options['larger_page_numbers_multiple']);
+			$pages_to_show_minus_1 = $pages_to_show - 1;
+			$half_page_start = floor($pages_to_show_minus_1/2);
+			//ceil — Round fractions up (http://us2.php.net/manual/en/function.ceil.php)
+			$half_page_end = ceil($pages_to_show_minus_1/2);
+			$start_page = $paged - $half_page_start;
+
+			if($start_page <= 0) {
+				$start_page = 1;
+			}
+
+			$end_page = $paged + $half_page_end;
+			if(($end_page - $start_page) != $pages_to_show_minus_1) {
+				$end_page = $start_page + $pages_to_show_minus_1;
+			}
+			if($end_page > $max_page) {
+				$start_page = $max_page - $pages_to_show_minus_1;
+				$end_page = $max_page;
+			}
+			if($start_page <= 0) {
+				$start_page = 1;
+			}
+
+			$larger_per_page = $larger_page_to_show*$larger_page_multiple;
+			//round_num() custom function - Rounds To The Nearest Value.
+			$larger_start_page_start = (round_num($start_page, 10) + $larger_page_multiple) - $larger_per_page;
+			$larger_start_page_end = round_num($start_page, 10) + $larger_page_multiple;
+			$larger_end_page_start = round_num($end_page, 10) + $larger_page_multiple;
+			$larger_end_page_end = round_num($end_page, 10) + ($larger_per_page);
+
+			if($larger_start_page_end - $larger_page_multiple == $start_page) {
+				$larger_start_page_start = $larger_start_page_start - $larger_page_multiple;
+				$larger_start_page_end = $larger_start_page_end - $larger_page_multiple;
+			}
+			if($larger_start_page_start <= 0) {
+				$larger_start_page_start = $larger_page_multiple;
+			}
+			if($larger_start_page_end > $max_page) {
+				$larger_start_page_end = $max_page;
+			}
+			if($larger_end_page_end > $max_page) {
+				$larger_end_page_end = $max_page;
+			}
+			if($max_page > 1 || intval($pagenavi_options['always_show']) == 1) {
+				/*http://php.net/manual/en/function.str-replace.php */
+				/*number_format_i18n(): Converts integer number to format based on locale (wp-includes/functions.php*/
+				$pages_text = str_replace("%CURRENT_PAGE%", number_format_i18n($paged), $pagenavi_options['pages_text']);
+				$pages_text = str_replace("%TOTAL_PAGES%", number_format_i18n($max_page), $pages_text);
+				echo $before.'<div class="pagenavi">'."\n";
+
+				if(!empty($pages_text)) {
+					echo '<span class="pages">'.$pages_text.'</span>';
+				}
+				//Displays a link to the previous post which exists in chronological order from the current post.
+				/*http://codex.wordpress.org/Function_Reference/previous_post_link*/
+				previous_posts_link($pagenavi_options['prev_text']);
+
+				if ($start_page >= 2 && $pages_to_show < $max_page) {
+					$first_page_text = str_replace("%TOTAL_PAGES%", number_format_i18n($max_page), $pagenavi_options['first_text']);
+					//esc_url(): Encodes < > & " ' (less than, greater than, ampersand, double quote, single quote).
+					/*http://codex.wordpress.org/Data_Validation*/
+					//get_pagenum_link():(wp-includes/link-template.php)-Retrieve get links for page numbers.
+					echo '<a href="'.esc_url(get_pagenum_link()).'" class="first" title="'.$first_page_text.'">1</a>';
+					if(!empty($pagenavi_options['dotleft_text'])) {
+						echo '<span class="expand">'.$pagenavi_options['dotleft_text'].'</span>';
+					}
+				}
+
+				if($larger_page_to_show > 0 && $larger_start_page_start > 0 && $larger_start_page_end <= $max_page) {
+					for($i = $larger_start_page_start; $i < $larger_start_page_end; $i+=$larger_page_multiple) {
+						$page_text = str_replace("%PAGE_NUMBER%", number_format_i18n($i), $pagenavi_options['page_text']);
+						echo '<a href="'.esc_url(get_pagenum_link($i)).'" class="single_page" title="'.$page_text.'">'.$page_text.'</a>';
+					}
+				}
+
+				for($i = $start_page; $i  <= $end_page; $i++) {
+					if($i == $paged) {
+						$current_page_text = str_replace("%PAGE_NUMBER%", number_format_i18n($i), $pagenavi_options['current_text']);
+						echo '<span class="current">'.$current_page_text.'</span>';
+					} else {
+						$page_text = str_replace("%PAGE_NUMBER%", number_format_i18n($i), $pagenavi_options['page_text']);
+						echo '<a href="'.esc_url(get_pagenum_link($i)).'" class="single_page" title="'.$page_text.'">'.$page_text.'</a>';
+					}
+				}
+
+				if ($end_page < $max_page) {
+					if(!empty($pagenavi_options['dotright_text'])) {
+						echo '<span class="expand">'.$pagenavi_options['dotright_text'].'</span>';
+					}
+					$last_page_text = str_replace("%TOTAL_PAGES%", number_format_i18n($max_page), $pagenavi_options['last_text']);
+					echo '<a href="'.esc_url(get_pagenum_link($max_page)).'" class="last" title="'.$last_page_text.'">'.$max_page.'</a>';
+				}
+				next_posts_link($pagenavi_options['next_text'], $max_page);
+
+				if($larger_page_to_show > 0 && $larger_end_page_start < $max_page) {
+					for($i = $larger_end_page_start; $i <= $larger_end_page_end; $i+=$larger_page_multiple) {
+						$page_text = str_replace("%PAGE_NUMBER%", number_format_i18n($i), $pagenavi_options['page_text']);
+						echo '<a href="'.esc_url(get_pagenum_link($i)).'" class="single_page" title="'.$page_text.'">'.$page_text.'</a>';
+					}
+				}
+				echo '</div>'.$after."\n";
+			}
+		}
 	}
-	
-	
+
+
 	/*****
 	 * Description: Retrieve the Google Analytics code
 	 * Since: 0.1
@@ -491,9 +491,9 @@
 	/*****/
 	function mms_ga_code() {
 		global $shortname, $mms_general_settings;
-		
+
 		$ga = $mms_general_settings['mms-analytics-code'];
-		
+
 		if(isset($ga) && !empty($ga)) {
 			echo "<script>\n";
 			echo "var _gaq=[['_setAccount','$ga'],['_trackPageview']];`
@@ -584,7 +584,7 @@
 		} else {
 			return '<section class="one-column clear">' . do_shortcode($content) . '</section>';
 		}
-		
+
 	}
 
 	/*****
@@ -606,7 +606,7 @@
 			return '<section class="two-column">' . do_shortcode($content) . '</section>';
 		}
 	}
-	
+
 	/*****
 	 * Description: Display a three column layout
 	 * Useage: [three-column class="class-1 class-2"]CONTENT HERE TO BE WRAPPED[/three-column]
@@ -705,7 +705,7 @@
 			return '<div class="call-to-action">' . do_shortcode($content) . '</div>';
 		}
 	}
-	
+
 
 	/*****
 	 * Description: Display a button
@@ -769,7 +769,7 @@
 	function mms_clear() {
 		return '<div class="clear"></div>';
 	}
-	
+
 	/*****
 	 * Description: Register all of our shortcodes with WordPress when it is initalized
 	 * Since: 0.1
@@ -788,8 +788,8 @@
 		add_shortcode('clear', 'mms_clear');
 	}
 	add_action('init', 'mms_register_shortcodes');
-	
-	
+
+
 	/*****
 	 * Description: Stop the wpautop wptexturize filters from parsing our shortcodes and then reactivate them after
 	 * Since: 0.1
@@ -797,41 +797,41 @@
 	/*****/
 	function mms_formatter($content) {
 		$new_content = '';
-	
+
 		//matches the contents and the open and closing tags
 		$pattern_full = '{(\[raw\].*?\[/raw\])}is';
-	
+
 		//matches just the contents
 		$pattern_contents = '{\[raw\](.*?)\[/raw\]}is';
-	
+
 		//divide content into pieces
 		$pieces = preg_split($pattern_full, $content, -1, PREG_SPLIT_DELIM_CAPTURE);
-	
+
 		foreach($pieces as $piece) {
 			//look for presence of the shortcode
 			if(preg_match($pattern_contents, $piece, $matches)) {
-	
+
 				//append to content (no formatting)
 				$new_content .= $matches[1];
-				
+
 			} else {
-	
+
 				//format and append to content
 				$new_content .= wptexturize(wpautop($piece));
 			}
 		}
-	
+
 		return $new_content;
 	}
 	// Remove the 2 main auto-formatters
 	remove_filter('the_content', 'wpautop');
 	remove_filter('the_content', 'wptexturize');
-	
+
 	// Before displaying for viewing, apply this function
 	add_filter('the_content', 'mms_formatter', 99);
 	add_filter('widget_text', 'mms_formatter', 99);
-	
-	
+
+
 	//fix the backtrack_limit bug - if too many shortcodes are used, the content disappears.
 	//long posts should require a higher limit, see http://core.trac.wordpress.org/ticket/8553
 	@ini_set('pcre.backtrack_limit', 500000);
