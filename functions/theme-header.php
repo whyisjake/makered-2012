@@ -44,7 +44,7 @@
 				wp_enqueue_script('comment-reply');
 			}
 			if (is_page( 1250 )) {
-				wp_enqueue_script('js-directory-search', 'http://www.connectamillionminds.com/_js/widget.js', array('jquery'), '2.1', false);
+				wp_enqueue_script('js-directory-search', 'http://www.connectamillionminds.com/_js/widget.js', array(), '', true);
 			}
 		}
 	}
